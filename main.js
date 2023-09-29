@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 var scene = new THREE.Scene();
@@ -17,7 +17,7 @@ scene.add(camera);
 
 const textureLoader = new THREE.TextureLoader();
 //const circleTexture = textureLoader.load("/cercle_blanc.png");
-const alphaMap = textureLoader.load("/alphamap_cercle.png");
+const alphaMap = textureLoader.load("public/alphamap_cercle.png");
 
 const count = 150;
 const distance = 3;
@@ -26,7 +26,7 @@ const points = new Float32Array(count*3);
 const colors = new Float32Array(count*3);
 for (let i = 0; i < points.length; i++) {
     points[i] = THREE.MathUtils.randFloatSpread(distance * 2);
-    colors[i] = Math.random() * 0.9;
+    colors[i] = 0.2 + Math.random() * 0.6;
 }
 const geometry = new THREE.BufferGeometry();
 geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
@@ -44,8 +44,9 @@ const pointsObject = new THREE.Points(geometry, pointsMaterial);
 const group = new THREE.Group();
 group.add(pointsObject);
 const lineMaterial = new THREE.LineBasicMaterial({
-    color: 0xcccccc,
-    opacity: 0.05,
+    color: 0x757575,
+    opacity: 0.2,
+    transparent: 0.5,
     depthWrite: false,
 });
 const lineObject = new THREE.Line(geometry, lineMaterial);
@@ -89,9 +90,3 @@ window.addEventListener('resize', function() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
-
-function articleClicked(url) {
-    alert(url);
-    window.open(url, "_blank");
-    window.location.href = url;
-}

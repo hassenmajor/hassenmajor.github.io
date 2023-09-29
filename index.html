@@ -8,7 +8,9 @@
 		<title>Developer Portfolio</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" href="/homme_desert.png" type="image/png">
-		<script type="module" src="script.js" defer></script>
+		<script type="text/javascript" src="build/three.min.js" defer></script>
+		<script type="text/javascript" src="main.js" defer></script>
+		<script type="text/javascript" src="mode.js"></script>
 	</head>
 	<body>
 		
@@ -21,7 +23,11 @@
 		</div>
 
 		<section id="presentation">
-			<h1>Welcome.<br>I am <span style="color: darkgreen;">Hassen Major</span>, a full-stack developer.</h1>
+			<div>
+				<h1>Welcome.<br>I am <span style="color: darkgreen;">Hassen Major</span>, a full-stack developer.</h1>
+				Born in 1997, I wrote my first program in BASIC at 12 and since then I have never stopped coding.
+				Today, I enjoy building websites and mobile apps.
+			</div>
 		</section>
 
 		<section id="projets">
@@ -29,7 +35,15 @@
 				<div class="titre">Mauriforum</div>
 				PHP + MySQL
 			</a>
-			<a class="projet" id="2" href="" target="_blank">
+			<a class="projet" id="6" href="http://bassaraty.onlinewebshop.net/" target="_blank">
+				<div class="titre">Bassaraty</div>
+				Java EE + MongoDB
+			</a>
+			<a class="projet" id="4" href="http://bibliophile.pythonanywhere.com/" target="_blank">
+				<div class="titre">Bibliophile</div>
+				Python Django + SQLite
+			</a>
+			<a class="projet" id="2" href="http://comptarim.atwebpages.com/" target="_blank">
 				<div class="titre">Comptarim</div>
 				ReactJS
 			</a>
@@ -37,33 +51,37 @@
 				<div class="titre">Sahel Game</div>
 				JavaScript
 			</a>
-			<a class="projet" id="4" href="http://bibliophile.pythonanywhere.com/" target="_blank">
-				<div class="titre">Bibliophile</div>
-				Python Django
-			</a>
 			<a class="projet" id="5" href="http://molecule.scienceontheweb.net/" target="_blank">
 				<div class="titre">Molecule</div>
-				Typescript
-			</a>
-			<a class="projet" id="6" href="http://bassaraty.onlinewebshop.net/" target="_blank">
-				<div class="titre">Bassaraty</div>
-				Java EE
+				TypeScript
 			</a>
 		</section>
 		
 		<section id="social">
 			<a href="https://linkedin.com/in/hassenmajor" target="_blank">
-				<img src="public/linkedin.png" alt="linkedin">
+				<img src="public/linkedin.png" alt="linkedin" title="LinkedIn">
 			</a>
 			<a href="https://github.com/hassenmajor" target="_blank">
-				<img src="public/github.png" alt="github">
+				<img src="public/github.png" alt="github" title="Github">
 			</a>
-			<a href="https://wa.com/22231294178" target="_blank">
-				<img src="public/whatsapp.png" alt="whatsapp">
+			<a href="https://wa.com/22220204391" target="_blank">
+				<img src="public/whatsapp.png" alt="whatsapp" title="WhatsApp">
 			</a>
 			<a href="mailto:hassenmajor@gmail.com" target="_blank">
-				<img src="public/gmail.png" alt="gmail">
+				<img src="public/gmail.png" alt="gmail" title="Mail">
 			</a>
+		</section>
+
+		<section id="mobile">
+			Take a look to my apps 
+			<a href="https://www.amazon.com/s?i=mobile-apps&rh=p_4%3AHassen+MAJOR&search-type=ss">
+				<img id="mobile_image" src="public/badge_white.png" alt="amazon" title="Amazon">
+			</a>
+		</section>
+
+		<section id="mode">
+			<input type="radio" id="lightmode" name="mode" value="light" onchange="mode(this.id)" checked><label for="lightmode"> Light mode </label>
+			<input type="radio" id="darkmode" name="mode" value="dark" onchange="mode(this.id)"><label for="darkmode"> Dark mode </label>
 		</section>
 
 	</body>
