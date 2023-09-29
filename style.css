@@ -138,9 +138,9 @@ a {
 .projet:hover {
     border: solid 1px grey;
 }
-.projet:active {
+/* .projet:active {
     background-color: grey;
-}
+} */
 .titre {
     margin-bottom: 10px;
     font-weight: bold;
